@@ -355,7 +355,7 @@ contract CoralMarketplace is Ownable, ReentrancyGuard {
 	}
 
 	/**
-	 * Returns market items on regular sale or auction.
+	 * Returns market items on regular sale.
 	 */
 	function fetchItemsOnSale() public view returns (MarketItem[] memory) {
 		uint currentIndex = 0;
@@ -365,8 +365,7 @@ contract CoralMarketplace is Ownable, ReentrancyGuard {
 
 		// Fill array
 		for (uint i = 0; i < _itemIds.current(); i++) {
-			if (idToMarketItem[i + 1].onSale && (idToMarketItem[i + 1].typeItem == TypeItem.Regular
-				|| idToMarketItem[i + 1].typeItem == TypeItem.Auction)) {
+			if (idToMarketItem[i + 1].onSale && (idToMarketItem[i + 1].typeItem == TypeItem.Regular)) {
 				uint currentId = idToMarketItem[i + 1].itemId;
 				MarketItem storage currentItem = idToMarketItem[currentId];
 				items[currentIndex] = currentItem;

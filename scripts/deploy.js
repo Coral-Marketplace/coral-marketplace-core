@@ -15,7 +15,7 @@ async function main() {
 
   console.log('starting deployment...');
 
-  const ownerAccount = await hre.reef.getSignerByName('account1');
+  const ownerAccount = await hre.reef.getSignerByName('account');
 
   // Deploy CoralMarketplace
   const NFTMarketplace = await hre.reef.getContractFactory('CoralMarketplace', ownerAccount);
