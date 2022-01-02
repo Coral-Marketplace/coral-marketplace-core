@@ -160,7 +160,7 @@ describe('************ Loans ******************', ()  => {
     expect(Number(loan.tokenId)).to.equal(token1Id);
     expect(Number(loan.loanAmount)).to.equal(Number(loanAmount));
     expect(Number(loan.feeAmount)).to.equal(Number(feeAmount));
-    expect(Number(loan.daysDuration)).to.equal(loanDuration);
+    expect(Number(loan.minutesDuration)).to.equal(loanDuration);
     expect(parseInt(loan.lender, 16)).to.equal(0);
     expect(Number(loan.repayByTimestamp)).to.equal(0);
     expect(loan.state).to.equal(0);
